@@ -52,11 +52,14 @@ async function sendTicketEmail(guest) {
   const subject =
     `TU ENTRADA | RAMONA Y ALBINO CHRISTMAS FEST 🎄`;
 
-  const salutation = `Hola, <strong><span style="color: #e65348;">${escapeHtml(guest.name)}</span></strong>, gracias por comprar a través de nuestra web. Aquí tienes tu entrada para el HelenFest`;
+  const salutation = `Hola, <strong><span style="color: #e65348;">${escapeHtml(guest.name)}</span></strong>, gracias por comprar a través de nuestra web.`;
 
   const salutation2 = `¡Esta Navidad necesitaba un milagro…y se ha hecho realidad! <strong>RAMONA Y ALBINO</strong> vuelven a los escenarios con su gira <strong>FELICITÁ CHRISTMAS TOUR 2026</strong>!`;
   const salutation3 =
     "Así que aquí tienes tu entrada para el <strong>RAMONA Y ALBINO CHRISTMAS FEST</strong> 🎄🎉.";
+  const readConditions = `
+    <p style="margin:0 0 14px; text-align: justify">Poooorfa, recuerda leer las <strong>CONDICIONES GENERALES</strong> del evento y sobre toooodo: <strong>NO</strong> ESCANEES EL QR (jiji).</p>
+  `;
 
   const generalCondition = `
   <div style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 1.6; color: #222; text-align: justify;">
@@ -67,6 +70,7 @@ async function sendTicketEmail(guest) {
        jolgorio, regocijo y gozosa convivencia. Exprime al máximo la magnífica oportunidad de celebrar juntos esta navidad jubilosa.
         Mariah Carey ya está descongelada, tú verás si estás a la altura!. “And remember”: All I want for Christmas……….. is YOU!!!!!
     <br>
+    <br>
       <strong>🍰 &nbsp;02. PROTOCOLO DE ABASTECIMIENTO GASTRONÓMICO Y ESPIRITUOSO</strong><br>
       Recuerda que <strong>RAMONA Y ALBINO CHRISTMAS FEST</strong> es un festival de alta gastronomía colaborativa de andar por casa,
        así que cada FANSSS deberá traer algo sabroso y alguna bebida con más o menos espírituosidad, según congratulación personal.
@@ -74,17 +78,20 @@ async function sendTicketEmail(guest) {
         serán recibidas con alegría y <del>entusiasmo</del> (¡hambre, mucha hambre!).
       
    <br>
+    <br>
       <strong>🎶 &nbsp;03. ¡QUE RESUENEN LOS CÁNTICOS HASTA EN EL PORTAL DE BELÉN!</strong><br>
       Durante el desarrollo conciertístico, se exigirá entrega vocal absoluta, entusiasmo desmedido y algún que otro falsete que pueda
        despertar al niñito Jesús. Si no te sabes la letra, tú improvisa, que total no se nota… La organización valorará positivamente
         la entrega de sus <strong>FANSES</strong> y mostrará descarada predilección por aquellos que más se hagan notar 
         (<u>fomentamos activamente la competitividad</u>).
     <br>
+    <br>
       <strong>🎤 &nbsp;04. KARAOKE: GLORIA VOCAL Y DESENFRENO INTERPRETATIVO</strong><br>
       Al karaoke se viene a dis-fru-tar. Se ruega despliegue de carisma y ausencia absoluta de modestia. Que cojas el micro, coño,
        ¡no muerde!, y destroza sin piedad esos temazos que tantas alegrías han dado a la humanidad. Y recuerda: se perseguirá cualquier
         sospecha de ensayo previo. Los FANSES traidores podrán ser sancionados con la interpretación de una canción sorpresa, elegida
          meticulosamente por la organización (spoiler: la tal «dignidad» esa no sobrevivirá).
+    <br>
     <br>
       <strong>🏆  &nbsp;05. ALBINO DE ORO: HONORES A LA MÁS SOBERBIA EXHIBICIÓN DE ATAVÍO NAVIDEÑO</strong><br>
       Se convoca el <strong>CONCURSO DE LUCS NAVIDEÑOS</strong> (<em>de participación voluntaria</em>), y con ello se autoriza el paso
@@ -95,6 +102,7 @@ async function sendTicketEmail(guest) {
         de extraordinaria magnificencia y dudosa utilidad práctica.
     <br>
     Se valorarán el exceso, las horteradas y el despilfarro eléctrico. ¡Con el patrocinio oficial de Abel Caballero!
+    <br>
     <br>
 
       <strong>📸  &nbsp;06.  ¡EL BOCHORNO ES EFÍMERO, LAS FOTOS ETERNAS!</strong><br>
@@ -182,6 +190,7 @@ async function sendTicketEmail(guest) {
         <p style="text-align: justify;">¡${salutation}!</p>
         <p style="text-align: justify;">${salutation2}</p>
         <p style="text-align: justify;">${salutation3}</p>
+        <p style="text-align: justify;">${readConditions}</p>
         ${ticketTable}
         <h3 style="color: #e65348 ; font-size: 14px;">CONDICIONES GENERALES</h3>
         <hr style="border: 0; border-top: 1px solid #cccccc;">
