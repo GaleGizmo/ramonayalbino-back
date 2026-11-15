@@ -52,7 +52,7 @@ async function sendTicketEmail(guest) {
   const subject =
     `TU ENTRADA | RAMONA Y ALBINO CHRISTMAS FEST 🎄`;
 
-  const salutation = `Hola, <strong><span style="color: #e65348;">${escapeHtml(guest.name)}</span></strong>, gracias por comprar a través de nuestra web.`;
+  const salutation = `¡Hola, <strong><span style="color: #e65348;">${escapeHtml(guest.name)}</span></strong>, gracias por comprar a través de nuestra web!`;
 
   const salutation2 = `¡Esta Navidad necesitaba un milagro…y se ha hecho realidad! <strong>RAMONA Y ALBINO</strong> vuelven a los escenarios con su gira <strong>FELICITÁ CHRISTMAS TOUR 2026</strong>!`;
   const salutation3 =
@@ -187,7 +187,7 @@ async function sendTicketEmail(guest) {
     html: `
       <div style="font-family: sans-serif; color: #1b1633; background-color: #ffffff;">
         ${headerImage ? headerImage.html : ""}
-        <p style="text-align: justify;">¡${salutation}!</p>
+        <p style="text-align: justify;">${salutation}</p>
         <p style="text-align: justify;">${salutation2}</p>
         <p style="text-align: justify;">${salutation3}</p>
         <p style="text-align: justify;">${readConditions}</p>
