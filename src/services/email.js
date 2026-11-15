@@ -58,7 +58,7 @@ async function sendTicketEmail(guest) {
   const salutation3 =
     "Así que aquí tienes tu entrada para el <strong>RAMONA Y ALBINO CHRISTMAS FEST</strong> 🎄🎉.";
   const readConditions = `
-    <p style="margin:0 0 14px; text-align: justify">Poooorfa, recuerda leer las <strong>CONDICIONES GENERALES</strong> del evento y sobre toooodo: <strong>NO</strong> ESCANEES EL QR (jiji).</p>
+    <p style="margin:0 0 14px; text-align: justify">Poooorfa, recuerda leer las <strong>CONDICIONES GENERALES</strong> del evento y sobre toooodo: <strong>NO</strong> escanees el QR (jiji).</p>
   `;
 
   const generalCondition = `
@@ -126,7 +126,7 @@ async function sendTicketEmail(guest) {
        que en plenas fiestas el precio de las gambas está por las nubes. Si ha recibido este mensaje por error, rogamos proceda a
         su destrucción. El tratamiento de datos se realizará de forma confidensial y de conformidad con la normativa vigente. Ud. 
         Podrá ejercer el derecho de rectificación, limitación y cancelación de sus datos en los términos establecidos en la Ley Orgánica
-         3/2018, del 5 de diciembre, de Protección de Camellos personales y Garantía de los Villancicos Desafinados, otra cosa es que 
+         3/2018, del 5 de diciembre, de Protección de Camellos Personales y Garantía de los Villancicos Desafinados, otra cosa es que 
          le hagamos caso, porque una vez que se ha apuntado, ahora tiene que venir.  La organización no se responsabiliza de posibles
           daños psicológicos o reputacionales derivados de la participación en ninguna de las actividades organizadas en el 
           RAMONA Y ALBINO CHRISTMAS FEST, ni de la existencia de imágenes o videos que pongan en compromiso la dignidad de los
