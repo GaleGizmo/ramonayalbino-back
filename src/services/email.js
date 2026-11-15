@@ -179,7 +179,7 @@ async function sendTicketEmail(guest) {
   `;
 
   await transporter.sendMail({
-    from: `"HelenFest" <${fromAddress}>`,
+    from: `"Ramona y Albino" <${fromAddress}>`,
     to: guest.email,
     bcc: process.env.MAIL_BCC || "",
     subject: subject,
